@@ -19,8 +19,8 @@ class Reader:
         self.code_list= []
         self.src = src
 
-    def file_reader(self, src: str): 
-        for root, dirs, files in os.walk(src):
+    def file_reader(self): 
+        for root, dirs, files in os.walk(self.src):
             # print("root_dir: ", root) #当前目录路径
             # print("sub_dirs: ", dirs) #当前路径下所有子目录
             # print('files: ', files) #当前路径下所有非目录子文件
@@ -45,8 +45,8 @@ class Reader:
                     self.win_list.append(file)
                 
 if __name__ == '__main__':
-    fr = Reader()
-    fr.file_reader(u'../赛题材料')
+    fr = Reader(u'../赛题材料')
+    fr.file_reader()
     # fr.image_reader()
     # fr.office_reader()
     print(fr.file_list)
