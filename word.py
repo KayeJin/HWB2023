@@ -61,6 +61,6 @@ class WordReader:
     #             f.write(blob)
 if __name__ == '__main__':
     WR = Reader.Reader('../赛题材料')
-    WR.file_reader(WR.src)
+    WR.file_reader()
     wr = WordReader("../赛题材料/office", WR.office_list)
     wr.getText()

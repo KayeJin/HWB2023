@@ -2,7 +2,7 @@ import os
 import docx
 
 Img = ['jpg', 'JPG', 'png', 'PNG', 'gif',  'GIF', 'bmp', 'BMP', 'tif', 'TIF', 'tiff', 'TIFF']
-Office = ['ppt', 'xlsx', 'docx', 'doc'] 
+Office = ['ppt', 'xlsx', 'docx', 'doc', 'pptx'] 
 Wps = ['dps', 'wps', 'et']
 Win = ['hiv', 'sam', 'system']
 Txt = ['txt']
