@@ -11,12 +11,15 @@ class WordReader:
 
     def getText(self):  #文本
         res = []
+        print(self.office_list)
+        print(self.src)
         for file in self.office_list:
-            if file.split('.')[1] == 'docx':
+            if file.split('.')[1] == 'docx' :
                 document = Document(self.src+'/'+file)
                 for paragraph in document.paragraphs:
                     res.append(paragraph.text+"\n")
                     # print(paragraph.text)
+                # document.close()
         with open("../word_text", 'w') as f:
             for i in res:
                 f.write(i)
@@ -60,7 +63,7 @@ class WordReader:
     #             blob = img.blob
     #             f.write(blob)
 if __name__ == '__main__':
-    WR = Reader.Reader('../赛题材料')
+    WR = Reader.Reader('../赛题材料/wps')
     WR.file_reader()
-    wr = WordReader("../赛题材料/office", WR.office_list)
+    wr = WordReader("../赛题材料/wps", WR.office_list)
     wr.getText()
