@@ -28,17 +28,17 @@ class Reader:
                 self.file_list.append(file)
         for file in self.file_list:
             if len(file.split('.')) == 2:
-                if file.split('.')[1] in Img:           #image
+                if file.split('.')[-1] in Img:           #image
                     self.img_list.append(file)
                     # self.file_list.remove(file)
-                elif file.split('.')[1] in Office:      #office
+                elif file.split('.')[-1] in Office:      #office
                     self.office_list.append(file)
-                elif file.split('.')[1] in Wps:         #wps
+                elif file.split('.')[-1] in Wps:         #wps
                     self.wps_list.append(file)
-                elif file.split('.')[1] in Win:         #windows
+                elif file.split('.')[-1] in Win:         #windows
                     self.win_list.append(file)
             # elif file.split('.')[1] in Code:
-                elif file.split('.')[1] in Txt:         #txt
+                elif file.split('.')[-1] in Txt:         #txt
                     self.txt_list.append(file)
             else:                                       #linux文件、Win没有后缀
                 if file in Win:

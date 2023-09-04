@@ -14,7 +14,7 @@ class WordReader:
         print(self.office_list)
         print(self.src)
         for file in self.office_list:
-            if file.split('.')[1] == 'docx' :
+            if file.split('.')[-1] == 'docx' :
                 document = Document(self.src+'/'+file)
                 for paragraph in document.paragraphs:
                     res.append(paragraph.text+"\n")
@@ -26,7 +26,7 @@ class WordReader:
     
     def getTable(self): # https://blog.csdn.net/zhouz92/article/details/107179616
         for file in self.office_list:
-            if file.split('.')[1] == 'docx':
+            if file.split('.')[-1] == 'docx':
                 document = Document(self.src+'/'+file)
                 tables = document.tables #表格集
                 for table in tables:

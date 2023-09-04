@@ -15,7 +15,7 @@ class PPtReader:
         print(self.office_list)
         res = []
         for file in self.office_list:
-            if file.split('.')[1] == 'pptx':
+            if file.split('.')[-1] == 'pptx':
                 presentation = Presentation(self.src+"/"+file)
                 for slide in presentation.slides:
                     for shape in slide.shapes:
@@ -31,7 +31,7 @@ class PPtReader:
     def getTable(self):
         res = []
         for file in self.office_list:
-            if file.split('.')[1] == 'pptx':
+            if file.split('.')[-1] == 'pptx':
                 presentation = Presentation(self.src+"/"+file)
                 for slide in presentation.slides:
                     for shape in slide.shapes:
@@ -43,7 +43,7 @@ class PPtReader:
     def getPicture(self):
         global index
         for file in self.office_list:
-            if file.split('.')[1] == 'pptx':
+            if file.split('.')[-1] == 'pptx':
                 presentation = Presentation(self.src+"/"+file)
                 for slide in presentation.slides:
                     for shape in slide.shapes:

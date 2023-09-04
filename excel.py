@@ -10,7 +10,7 @@ class ExcelReader():
     def getText(self):
         res = []
         for file in self.office_list:
-            if file.split('.')[1] == 'xlsx':
+            if file.split('.')[-1] == 'xlsx':
                 excel = load_workbook(self.src+"/"+file)
                 sheets = excel.sheetnames
                 for i in range(len(sheets)): #获取workbook中所有表格
