@@ -1,4 +1,5 @@
 test
-__pycache__
+__pycache__/
+allFile.txt
 test1
 test.*

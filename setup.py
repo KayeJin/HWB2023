@@ -15,22 +15,23 @@ class Decompress: #题目：单个压缩包
     # compressed_list = ['gz', 'tar', 'zip', 'rar'] #类变量
 
     def __init__(self, compress_src: str, decompress_src: str) -> None:
-        self.com_src = compress_src #压缩文件      #实例变量
-        self.decom_src = decompress_src #解压缩文件
+        self.com_src = compress_src #压缩文件     #实例变量
+        self.allFile = [] #文件
         self.compressed_list = ['gz', 'tar', 'zip', 'rar']
-        
-
-    def ungz(self, filename = []) -> None:
+        if decompress_src == '' :
+            self.decompression()
+        self.decom_src = decompress_src #解压缩文件
+            
+    def ungz(self, filename = []) -> str:
         if filename == []:
             filename = self.com_src
         file_name = filename[:-3] #去掉.gz
         gz_file = gzip.GzipFile(filename)
         with open(file_name, "wb+") as file:
             file.write(gz_file.read())
-        self.decom_src = file_name
-        # return file_name
+        return file_name
 
-    def untar(self, filename = []) -> None:
+    def untar(self, filename = []) -> str:
         if filename == []:
             filename = self.com_src
         file_name = filename[:-4] #去掉.tar
@@ -42,9 +43,9 @@ class Decompress: #题目：单个压缩包
             file_name = file_name+"_tar"
         tar.extractall(file_name) 
         tar.close()
-        self.decom_src = file_name
+        return file_name
 
-    def unzip(self, filename = []) -> None :
+    def unzip(self, filename = []) -> str :
         if filename == []:
             filename = self.com_src
         file_name = filename[:-4] #去掉.zip
@@ -56,9 +57,9 @@ class Decompress: #题目：单个压缩包
             file_name = file_name+"_zip"
         zip.extractall(file_name)
         zip.close()
-        self.decom_src = file_name
+        return file_name
 
-    def unrar(self, filename = []) -> None: #未测试，centos需要下载rar包
+    def unrar(self, filename = []) -> str: #未测试，centos需要下载rar包
         if filename == []:
             filename = self.com_src
         file_name = filename[:-4]
@@ -71,71 +72,68 @@ class Decompress: #题目：单个压缩包
         os.chdir(file_name)
         rar.extractall()
         rar.close()
-        self.decom_src = file_name
+        return file_name
+
+    def saveFile(self, src: str):
+        for roots, dirs, files in os.walk(src):
+            for file in files:
+                print(file )
+                print(os.path.join(roots, file))
+                self.allFile.append(os.path.join(roots, file)) #记录子压缩包的文件
 
     def decompression(self, filename = []) -> None :
         if filename == []:
             filename = self.com_src
         suffix = filename.split('.')[-1]
+        subfilename = ''
         if suffix in self.compressed_list:
             if suffix == 'gz':
                 new_filename = self.ungz(filename) #查看是否有tar后缀
                 # os.remove(filename)
                 if new_filename.split('.')[-1] == 'tar':
-                    self.untar(new_filename)
+                    subfilename = self.untar(new_filename)
             elif suffix == 'tar':
-                self.untar(filename)
+                subfilename = self.untar(filename)
             elif suffix == 'zip':
-                self.unzip(filename)
+                subfilename = self.unzip(filename)
             elif suffix == 'rar':
-                self.unrar(filename)
+                subfilename = self.unrar(filename)
+        if self.com_src == '':
+            self.com_src = subfilename
+        self.saveFile(subfilename)
 
 class SaveFile(Decompress):
 
     def __init__(self, compress_src: str, decompress_src: str) -> None:
-        self.allFile = []
-        # self.src = decompress_src #第一层目录
         super(SaveFile, self).__init__(compress_src, decompress_src) #初始化父类
 
-
     def extractFile(self) -> None:
-        for roots, dirs, files in os.walk(self.decom_src):
-            print(self.decom_src)
+        for roots, dirs, files in os.walk(self.decom_src):   
             for file in files:
                 if file.split('.')[-1] not in self.compressed_list:
                     self.allFile.append(os.path.join(roots, file)) #相对路径
-                    print(os.path.join(roots, file))
                 else:  #子压缩文件
-                    print('\n&&&&&&&&&&&&&&&&&&&&&&& \n')
                     self.decompression(os.path.join(roots, file))
-            # for dir in dirs:
-            #     print(os.path.join(roots,dir))
-        # print(self.allFile)
+        
+        with open("allFile.txt", "w") as f: #保存文件
+            for i in self.allFile:
+                if i.split(".")[-1] not in self.compressed_list:
+                    f.write(i + '\n')
 
-    def changeFormat(src: str, files: []):
-        print(files)
+    def changeFormat(self):
+        # print(files)
+        src = self.com_src
+        files = self.allFile
         for file in files:
             if file.split('.')[-1] in ['doc', 'ppt', 'wps', 'dps', 'et']:
                 x = src + '/'
-                sudoPassword = 'asdfghjkl'
                 dic = {'doc': 'docx', 'ppt': 'pptx', 'wps': 'docx', 'dps': 'pptx', 'et': 'xlsx'}
                 command = 'libreoffice --headless --convert-to ' + dic[file.split('.')[-1]]+' '+ x + file + ' --outdir '+ x
-                os.sysconf(command)
-                # os.system('echo %s | sudo -S %s' % (sudoPassword,command))
-
-
-
+                os.system(command)
 
 if __name__ == '__main__':
-    # filename = 'test.rar'
-    # unrar(filename)
 
-
-    S = SaveFile(compress_src=[],decompress_src='../赛题材料1')
+    S = SaveFile(compress_src='../赛题材料2.zip',decompress_src='')
     S.extractFile()
-    # R = Reader.Reader(u'../赛题材料/wps')
-    # R.file_reader()
-    # file_reader(u'../赛题材料/wps', R.wps_list)
-    
-    ###问题：1. centos下需要sudo ----> os.popen实现
-    ###      2. 找不到文件路径
+    S.changeFormat()
+ 
