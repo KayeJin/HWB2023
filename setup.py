@@ -7,6 +7,7 @@ from multiprocessing.dummy import Pool
 import Reader
 import sys,shutil
 import gzip, tarfile, zipfile, rarfile
+import random
 
 sys.path
 
@@ -21,8 +22,8 @@ class Decompress: #题目：单个压缩包
         self.compressed_list = ['gz', 'tar', 'zip', 'rar']
         if decompress_src == '' :
             self.decompression()
-        # self.decom_src = decompress_src #解压缩文件
-        # print(self.decom_src)
+        else:
+            self.decom_src = decompress_src
             
     def ungz(self, filename = []) -> str:
         if filename == []:
@@ -79,7 +80,6 @@ class Decompress: #题目：单个压缩包
     def saveFile(self, src: str):
         for roots, dirs, files in os.walk(src):
             for file in files:
-                # print(file + "\n" + os.path.join(roots, file))
                 self.allFile.append(os.path.join(roots, file)) #记录子压缩包的文件
 
     def decompression(self, filename = []) -> None :
@@ -109,11 +109,11 @@ class SaveFile(Decompress):
         super(SaveFile, self).__init__(compress_src, decompress_src) #初始化父类
 
     def extractFile(self) -> None:
-        # print(self.decom_src)
         for roots, dirs, files in os.walk(self.decom_src):   
             for file in files:
                 if file.split('.')[-1] not in self.compressed_list:
-                    self.allFile.append(os.path.join(roots, file)) #相对路径
+                    if os.path.join(roots, file) not in self.allFile:
+                        self.allFile.append(os.path.join(roots, file)) #相对路径
                 else:  #子压缩文件
                     self.decompression(os.path.join(roots, file))
         
@@ -122,37 +122,38 @@ class SaveFile(Decompress):
                 if i.split(".")[-1] not in self.compressed_list:
                     f.write(i + '\n')
 
-    def changeFormat(self): #多级目录 ---> 单个目录
-        outdir_path = "destinationDir"
+    def changeFormat(self): 
+        outdir_path = "destinationDir/"
         if os.path.exists(outdir_path):
             shutil.rmtree(outdir_path)
         os.mkdir(outdir_path)
         files = self.allFile 
         FileList = []
-        for file in self.allFile: #转一下
-            file = file.replace('..', '\..')
-            file = file.replace('/', '\\')
-            FileList.append(file)
 
-        print(files)
-        print(FileList)
-
-        for file in files:
+        for file in self.allFile: 
+            file1 = '1' + file.replace('/', '%').replace('$','xx').replace('~','xxx')
+            FileList.append(outdir_path + file1)   #多级目录 ---> 单个目录
+            shutil.copy2(file, outdir_path + file1)
+        with open('allFile.txt', 'w') as f:
+            for i in FileList:
+                f.write(i + "\n")
+        for file in FileList:
             if file.split('.')[-1] in ['doc', 'ppt', 'wps', 'dps', 'et']:
-                file2 = FileList[files.index(file)]
                 dic = {'doc': 'docx', 'ppt': 'pptx', 'wps': 'docx', 'dps': 'pptx', 'et': 'xlsx'}
-                file_path = file2[0: -len(file.split('.')[-1])] + '.' + dic[file.split('.')[-1]]
-                outdir_path1 = outdir_path+"/"+file_path
-                command =f"libreoffice --headless --convert-to {dic[file.split('.')[-1]]}  {file} --outdir {outdir_path1} "  ###需修改
+                print(file)
+                
+                command =f"soffice --headless --convert-to {dic[file.split('.')[-1]]}  {file} --outdir {outdir_path} "  ###需修改
                 os.system(command)
-            else:
-                shutil.copy2(file, "destinationDir/" + FileList[files.index(file)])
+                os.remove(file)
+                # subprocess.run(command, shell= True)
+                
+                
 
 
 if __name__ == '__main__':
     if os.path.exists('../赛题材料_zip/'):
         shutil.rmtree('../赛题材料_zip/')
-    S = SaveFile(compress_src='../赛题材料.zip',decompress_src='')
+    S = SaveFile(compress_src='',decompress_src='../赛题材料')
     # S.decompression()
     S.extractFile()
     S.changeFormat()
