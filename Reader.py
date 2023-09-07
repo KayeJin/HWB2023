@@ -7,6 +7,7 @@ Wps = ['dps', 'wps', 'et']
 Win = ['hiv', 'sam', 'system']
 Txt = ['txt']
 Eml = ['eml'] #邮件
+
 class Reader:
 
     def __init__(self, src: str) -> None:
@@ -21,16 +22,12 @@ class Reader:
 
     def file_reader(self): 
         for root, dirs, files in os.walk(self.src):
-            # print("root_dir: ", root) #当前目录路径
-            # print("sub_dirs: ", dirs) #当前路径下所有子目录
-            # print('files: ', files) #当前路径下所有非目录子文件
             for file in files:
                 self.file_list.append(file)
         for file in self.file_list:
             if len(file.split('.')) == 2:
                 if file.split('.')[-1] in Img:           #image
                     self.img_list.append(file)
-                    # self.file_list.remove(file)
                 elif file.split('.')[-1] in Office:      #office
                     self.office_list.append(file)
                 elif file.split('.')[-1] in Wps:         #wps
@@ -43,7 +40,7 @@ class Reader:
             else:                                       #linux文件、Win没有后缀
                 if file in Win:
                     self.win_list.append(file)
-                
+
 if __name__ == '__main__':
     fr = Reader(u'../赛题材料')
     fr.file_reader()

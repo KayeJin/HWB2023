@@ -62,6 +62,8 @@ class WordReader:
     #         for img in img_list:
     #             blob = img.blob
     #             f.write(blob)
+
+
 if __name__ == '__main__':
     WR = Reader.Reader('../赛题材料/wps')
     WR.file_reader()

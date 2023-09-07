@@ -11,7 +11,7 @@ class ExcelReader():
         res = []
         for file in self.office_list:
             if file.split('.')[-1] == 'xlsx':
-                excel = load_workbook(self.src+"/"+file)
+                excel = load_workbook(self.src + file)
                 sheets = excel.sheetnames
                 for i in range(len(sheets)): #获取workbook中所有表格
                     # sheet = excel.get_sheet_by_name(sheets[i])
