@@ -31,8 +31,8 @@ if __name__ == '__main__':
     pR.getTable()
     eR = ExcelReader.ExcelReader(S.decom_src, R.office_list)
     eR.getText()
-    iR = ImageReader.ImageReader(OS.Linux, R.src, R.img_list)
-    iR.save()
+    # iR = ImageReader.ImageReader(R.src, R.img_list)
+    # iR.save()
 
                 
 

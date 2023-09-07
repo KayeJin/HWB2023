@@ -150,6 +150,8 @@ class SaveFile(Decompress):
             if file.split('.')[-1] in ['doc', 'ppt', 'wps', 'dps', 'et']:
                 dic = {'doc': 'docx', 'ppt': 'pptx', 'wps': 'docx', 'dps': 'pptx', 'et': 'xlsx'}
                 command =f"soffice --headless --convert-to {dic[file.split('.')[-1]]}  {file} --outdir {outdir_path} "  ###需修改
+                #java有包可以做转换工作
+                
                 os.system(command)
                 os.remove(file)
         

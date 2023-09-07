@@ -21,20 +21,20 @@ Img = ['.jpg', '.JPG', '.png', '.PNG', '.gif',  '.GIF', '.bmp', '.BMP', '.tif', 
 
 class ImageReader: #从所有文件夹中读取所有图片文件
 
-    def __init__(self, os: OS, src: str, img_list: []) -> None:
+    def __init__(self,  src: str, img_list: []) -> None:
         self.src = src
         self.img_list = img_list
 
-        if os == OS.Linux:
-            print('Running on Linux\n')
+        # if os == OS.Linux:
+        #     print('Running on Linux\n')
 
-        if os == OS.Windows:
-            Windows_path = r'path:teseract.exe'
-            pytesseract.tesseract_cmd = Windows_path
-            print('Running on Windows\n')
+        # if os == OS.Windows:
+        #     Windows_path = r'path:teseract.exe'
+        #     pytesseract.tesseract_cmd = Windows_path
+        #     print('Running on Windows\n')
 
-        if os == OS.Mac:
-            print('Running on Mac\n')
+        # if os == OS.Mac:
+        #     print('Running on Mac\n')
 
     def extract_text(self, image: str, lang: Languages) -> str:
         img = Image.open(image)
