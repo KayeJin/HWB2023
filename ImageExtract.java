@@ -10,11 +10,11 @@ public class ImageExtract {
 	public static void main(String[] args) {
 
 		// 设置Tessdata环境变量
-		System.setProperty("TESSDATA_PREFIX", "/usr/share/tesseract-ocr2/5/tessdata/directory");
+		System.setProperty("TESSDATA_PREFIX", "/path/");
 
 		// 输入图片文件夹路径和输出txt文件路径
-		String inputFolderPath = "/home/liu-shutong/Share/001/ppt_png";
-		String outputTxtFilePath = "/home/liu-shutong/Share/002/output.txt";
+		String inputFolderPath = "/path/";
+		String outputTxtFilePath = "/path/";
 
     //存儲文件名到數組
 		File inputFolder = new File(inputFolderPath);
