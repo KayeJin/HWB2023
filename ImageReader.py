@@ -44,14 +44,21 @@ class ImageReader: #从所有文件夹中读取所有图片文件
     def save(self) -> str:
         res = []
         for img in self.img_list:
-            text = self.extract_text(self.src+'/'+img, lang=Languages.ENG)
-            res.append(text)
+            text = self.extract_text(self.src+'/'+img, lang=Languages.ENG_CHN)
+            res.append("\n"+img+"\n")
+            res.append(text.replace('\n\n',''))
+        # for i in res:
+        #     print(i)
         with open("../image_text", 'w') as f:
             for i in res:
+                # print(i)
                 f.write(i)
 
 if __name__ == '__main__':
-    IR = Reader.Reader('../赛题材料')
-    IR.file_reader(IR.src)
-    ir = ImageReader(OS.Linux, IR.src, IR.img_list)
+    IR = Reader.Reader('../IMAGE2/')
+    IR.file_reader()
+    # print(IR.img_list)
+
+    ir = ImageReader( IR.src, IR.img_list)
+    
     ir.save()

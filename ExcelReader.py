@@ -26,7 +26,7 @@ class ExcelReader():
                 f.write(i)
 
 if __name__ == "__main__":
-    R = Reader.Reader('../赛题材料/office')
+    R = Reader.Reader('dDIR/')
     R.file_reader()
     ER = ExcelReader(R.src, R.office_list)
     ER.getText()

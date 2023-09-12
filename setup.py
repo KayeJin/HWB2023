@@ -23,7 +23,7 @@ if __name__ == '__main__':
     R.file_reader()
     wR = WordReader.WordReader(S.decom_src, R.office_list)
     wR.getText()
-    # wR.getPicture()
+    wR.getPicture()
     wR.getTable()
     pR = PPtReader.PPtReader(S.decom_src, R.office_list)
     pR.getText()
@@ -31,8 +31,8 @@ if __name__ == '__main__':
     pR.getTable()
     eR = ExcelReader.ExcelReader(S.decom_src, R.office_list)
     eR.getText()
-    # iR = ImageReader.ImageReader(R.src, R.img_list)
-    # iR.save()
+    iR = ImageReader.ImageReader(R.src, R.img_list)
+    iR.save()
 
                 
 

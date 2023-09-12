@@ -163,7 +163,7 @@ class SaveFile(Decompress):
 if __name__ == '__main__':
     if os.path.exists('../赛题材料_zip/'):
         shutil.rmtree('../赛题材料_zip/')
-    S = SaveFile(compress_src='',decompress_src='../赛题材料')
+    S = SaveFile(compress_src='',decompress_src='../dDIR')
     # S.decompression()
     S.extractFile()
     S.changeFormat()
