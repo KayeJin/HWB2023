@@ -14,6 +14,8 @@ class PPtReader:
 
     def getText(self): #https://cloud.tencent.com/developer/article/1708628
         res = []
+        res_img = []
+        img_name = []
         for file in self.office_list:
             if file.split('.')[-1] == 'pptx':
                 presentation = Presentation(self.src+"/"+file)
@@ -29,18 +31,23 @@ class PPtReader:
                         elif isinstance(shape, Picture):
                             #shape.image.blob #图像二进制字节流
                             imagetype = shape.image.content_type
-                            imtype = imagetype[imagetype.find('/') +1 : ] #后缀名
+                            imtype = imagetype[imagetype.find('/') +1 : ] #后缀名\
+                            img_name.append('../IMAGE/'+file+shape.name+'_.'+imtype)
+                            res_img.append(shape.image.blob)
                             # print(imtype)
-                            path = '../IMAGE2/'+file+shape.name+'_.'+imtype
-                            with open(path, 'wb') as f:
-                                f.write(shape.image.blob)
+                            # path = '../IMAGE2/'+file+shape.name+'_.'+imtype
+                            # with open(path, 'wb') as f:
+                            #     f.write(shape.image.blob)
                                 # index += 1
-
-                            
-        
+  
         with open('../ppt_text', 'w', encoding='utf-8') as f:
             for i in res:
                 f.write(i)
+        c = 0
+        for i in img_name:
+            with open(i, "wb") as f:
+                f.write(res_img[c])
+            c += 1
 
     # def getTable(self):
     #     res = []

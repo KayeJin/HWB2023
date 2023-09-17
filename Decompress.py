@@ -9,6 +9,7 @@ import sys,shutil
 import gzip, tarfile, zipfile, rarfile
 from zipfile import ZipFile
 import random
+from pathlib import Path
 
 sys.path
 
@@ -50,11 +51,12 @@ class Decompress: #题目：单个压缩包
             filename = self.com_src
         file_name = filename[:-4] #去掉.tar
         tar = tarfile.open(filename)
-        if not os.path.isdir(file_name):
-            os.mkdir(file_name)
-        else:
-            os.mkdir(file_name+"_tar")
-            file_name = file_name+"_tar"
+        Path(file_name).mkdir(parents=True, exist_ok=True)
+        # if not os.path.isdir(file_name):
+        #     os.mkdir(file_name)
+        # else:
+        #     os.mkdir(file_name+"_tar")
+        #     file_name = file_name+"_tar"
         tar.extractall(file_name) 
         tar.close()
         return file_name
@@ -66,8 +68,9 @@ class Decompress: #题目：单个压缩包
         if not os.path.isdir(file_name):
             os.mkdir(file_name)
         else:
-            os.mkdir(file_name+"_zip")
+            # os.mkdir(file_name+"_zip")
             file_name = file_name+"_zip"
+            Path(file_name).mkdir(parents=True, exist_ok=True)
         with self.support_gbk(ZipFile(filename)) as zfp:
             zfp.extractall(file_name)
         return file_name
@@ -77,11 +80,12 @@ class Decompress: #题目：单个压缩包
             filename = self.com_src
         file_name = filename[:-4]
         rar = rarfile.RarFile(filename)
-        if not os.path.isdir(file_name):
-            os.mkdir(file_name)
-        else:
-            os.mkdir(file_name+"_rar")
-            file_name = file_name+"_rar"
+        # if not os.path.isdir(file_name):
+        #     os.mkdir(file_name)
+        # else:
+        #     os.mkdir(file_name+"_rar")
+        #     file_name = file_name+"_rar"
+        Path(file_name).mkdir(parents=True, exist_ok=True)
         os.chdir(file_name)
         rar.extractall()
         rar.close()
@@ -117,8 +121,12 @@ class SaveFile(Decompress):
 
     def __init__(self, compress_src: str, decompress_src: str) -> None:
         super(SaveFile, self).__init__(compress_src, decompress_src) #初始化父类
+        self.outdir_path = 'dDIR/'
+        Path('dDIR/').mkdir(parents=True,exist_ok=True)
 
     def extractFile(self) -> None:
+        print('######')
+        
         for roots, dirs, files in os.walk(self.decom_src):   
             for file in files:
                 if file.split('.')[-1] not in self.compressed_list:
@@ -128,32 +136,39 @@ class SaveFile(Decompress):
                     self.decompression(os.path.join(roots, file))
 
     def changeFormat(self): 
-        outdir_path = "dDIR/"
-        if os.path.exists(outdir_path):
-            shutil.rmtree(outdir_path)
-        os.mkdir(outdir_path)
+        # outdir_path = "dDIR/"
+        # if os.path.exists(outdir_path):
+        #     shutil.rmtree(outdir_path)
+        # os.mkdir(outdir_path)
         files = self.allFile 
         FileList = []
+        print(self.allFile)
+        with open('allFile.txt', 'w') as f:
+            for i in self.allFile:
+                f.write(i+"\n")
 
         for file in self.allFile:
             file1 = file[len(file.split('/')[0]) + len(file.split('/')[1]) + 1 : ]
             file1 = '1' + file1.replace('/', '%')
-            FileList.append(outdir_path + file1)   #多级目录 ---> 单个目录
-            shutil.copy2(file, outdir_path + file1)
-        
-        self.decom_src = outdir_path
-        with open('allFile.txt', 'w') as f:
+            FileList.append(self.outdir_path + file1)   #多级目录 ---> 单个目录
+            shutil.copy2(file, self.outdir_path + file1)
+
+        with open('allFile2.txt', 'w') as f:
             for i in FileList:
-                if i.split('.')[-1] not in self.compressed_list:
-                    f.write(i + "\n")
+                f.write(i+"\n")
+        self.decom_src = self.outdir_path
+        # with open('allFile.txt', 'w') as f:
+        #     for i in FileList:
+        #         if i.split('.')[-1] not in self.compressed_list:
+        #             f.write(i + "\n")
         for file in FileList:
+            print('soffice -- OK')
             if file.split('.')[-1] in ['doc', 'ppt', 'wps', 'dps', 'et']:
                 dic = {'doc': 'docx', 'ppt': 'pptx', 'wps': 'docx', 'dps': 'pptx', 'et': 'xlsx'}
-                command =f"soffice --headless --convert-to {dic[file.split('.')[-1]]}  {file} --outdir {outdir_path} "  ###需修改
+                command =f"libreoffice --headless --convert-to {dic[file.split('.')[-1]]}  {file} --outdir {self.outdir_path} "  ###需修改
                 #java有包可以做转换工作
-                
                 os.system(command)
-                os.remove(file)
+                # os.remove(file)
         
                 # subprocess.run(command, shell= True)
                 

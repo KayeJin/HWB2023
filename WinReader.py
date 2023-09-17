@@ -28,10 +28,11 @@ class WinReader:
 
         for key, value in self.win_dict.items():
 
-            s = "secretsdump.py -sam " + self.src + key + " -system " + self.src + value + " LOCAL"
+            # s = "secretsdump.py -sam " + self.src + key + " -system " + self.src + value + " LOCAL"
+            s = "secretsdump.py -sam " +  key + " -system " +  value + " LOCAL"
             res.append(subprocess.Popen(s, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT))
 
-        with open("../Win_test", "w") as f:
+        with open("../Win_test22", "w") as f:
             for i in res:  
                 for line in i.stdout.readlines():
                     f.write(str(line) + "\n")

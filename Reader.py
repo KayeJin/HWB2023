@@ -1,8 +1,9 @@
 import os
 import docx
 import shutil
+from pathlib import Path
 
-Img = ['jpg', 'JPG', 'png', 'PNG', 'gif',  'GIF', 'bmp', 'BMP', 'tif', 'TIF', 'tiff', 'TIFF']
+Img = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif',  'GIF', 'bmp', 'BMP', 'tif', 'TIF', 'tiff', 'TIFF']
 Office = ['ppt', 'xlsx', 'docx', 'doc', 'pptx'] 
 # Wps = ['dps', 'wps', 'et']
 Win = ['hiv', 'sam', 'system']
@@ -23,9 +24,10 @@ class Reader:
         self.count = 0
 
     def file_reader(self): 
-        for root, dirs, files in os.walk(self.src):
-            for file in files:
-                self.file_list.append(file)
+        self.file_list = os.listdir(self.src)
+        # for root, dirs, files in os.walk(self.src):
+        #     for file in files:
+        #         self.file_list.append(file)
         for file in self.file_list:
             with open(self.src+file, "r", encoding='utf-8') as f:
                 try:
@@ -36,6 +38,7 @@ class Reader:
 
         if os.path.exists(r'../Readable_text'):
             os.remove(r'../Readable_text')
+        # Path("../Readable_text").
         with open('../Readable_text', "a", encoding='utf-8') as f:
             for file in self.readable_list:
                 f.write(file + "\n")
@@ -46,16 +49,17 @@ class Reader:
         for file in self.unreadable_list:
             if len(file.split('.')) >= 2:
                 if file.split('.')[-1] in Img:           #image
-                    self.img_list.append(file)
+                    self.img_list.append(self.src+file)
                 elif file.split('.')[-1] in Office:      #office
-                    self.office_list.append(file)
+                    self.office_list.append(self.src+file)
                 # elif file.split('.')[-1] in Wps:         #wps
                 #     self.wps_list.append(file)
                 elif file.split('.')[-1] in Win:
-                    self.win_list.append(file)         #windows #.hiv
+                    self.win_list.append(self.src+file)         #windows #.hiv
             else:                                       #Win没有后缀
                 if file.split('%')[-1] in Win:          #win
-                    self.win_list.append(file)
+                    self.win_list.append(self.src+file)
+
 
 if __name__ == '__main__':
     fr = Reader(u'dDIR/')
