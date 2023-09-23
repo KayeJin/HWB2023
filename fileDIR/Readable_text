@@ -1,0 +1,1467 @@
+1%环境信息.txt
+
+
+研发区
+172.36.84.95
+172.36.84.96
+172.36.84.97
+root
+Pass@word!!!
+
+
+163邮箱
+kppublic@163.com
+13666628123
+Huawei@123456
+
+
+172.36.219.13
+root
+2!Um37hvjk1%linux%application-dev.yml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    driver-class-name: com.mysql.jdbc.Driver
+    username: xxlab
+    password: lab@998877
+1%linux%application.properties
+db.driver=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/mydb
+db.username=sysadmin
+db.password=kllSJkd!@777
+1%linux%applicationContext.xml
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/mydb"/>
+    <property name="username" value="root"/>
+    <property name="password" value="HHHLab@2022"/>
+</bean>
+1%linux%etc%passwd
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:101:101:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:x:102:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:103:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+mysql:x:104:110:MySQL Server,,,:/nonexistent:/bin/false
+tss:x:105:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+strongswan:x:106:65534::/var/lib/strongswan:/usr/sbin/nologin
+ntp:x:107:112::/nonexistent:/usr/sbin/nologin
+messagebus:x:108:113::/nonexistent:/usr/sbin/nologin
+redsocks:x:109:114::/var/run/redsocks:/usr/sbin/nologin
+rwhod:x:110:65534::/var/spool/rwho:/usr/sbin/nologin
+iodine:x:111:65534::/run/iodine:/usr/sbin/nologin
+miredo:x:112:65534::/var/run/miredo:/usr/sbin/nologin
+_rpc:x:113:65534::/run/rpcbind:/usr/sbin/nologin
+usbmux:x:114:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+tcpdump:x:115:121::/nonexistent:/usr/sbin/nologin
+rtkit:x:116:122:RealtimeKit,,,:/proc:/usr/sbin/nologin
+sshd:x:117:65534::/run/sshd:/usr/sbin/nologin
+statd:x:118:65534::/var/lib/nfs:/usr/sbin/nologin
+postgres:x:119:124:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+avahi:x:120:126:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+stunnel4:x:121:127::/var/run/stunnel4:/usr/sbin/nologin
+Debian-snmp:x:122:128::/var/lib/snmp:/bin/false
+speech-dispatcher:x:123:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+sslh:x:124:129::/nonexistent:/usr/sbin/nologin
+nm-openvpn:x:125:130:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+nm-openconnect:x:126:131:NetworkManager OpenConnect plugin,,,:/var/lib/NetworkManager:/usr/sbin/nologin
+pulse:x:127:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+saned:x:128:135::/var/lib/saned:/usr/sbin/nologin
+inetsim:x:129:137::/var/lib/inetsim:/usr/sbin/nologin
+colord:x:130:138:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:131:139::/var/lib/geoclue:/usr/sbin/nologin
+lightdm:x:132:140:Light Display Manager:/var/lib/lightdm:/bin/false
+king-phisher:x:133:141::/var/lib/king-phisher:/usr/sbin/nologin
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+redis:x:134:143::/var/lib/redis:/usr/sbin/nologin
+xxx:x:1001:1001::/home/xxx:/bin/bash
+zzz:x:1002:1002::/home/zzz:/bin/sh
+1%linux%etc%shadow
+root:$y$j9T$h/wzHI4rOruhirVde8IOL1$dkb3ql2PIIjRwus8Ikp9nDpwTbyaRhezJpPWtWOuhTD:19501:0:99999:7:::
+daemon:*:18843:0:99999:7:::
+bin:*:18843:0:99999:7:::
+sys:*:18843:0:99999:7:::
+sync:*:18843:0:99999:7:::
+games:*:18843:0:99999:7:::
+man:*:18843:0:99999:7:::
+lp:*:18843:0:99999:7:::
+mail:*:18843:0:99999:7:::
+news:*:18843:0:99999:7:::
+uucp:*:18843:0:99999:7:::
+proxy:*:18843:0:99999:7:::
+www-data:*:18843:0:99999:7:::
+backup:*:18843:0:99999:7:::
+list:*:18843:0:99999:7:::
+irc:*:18843:0:99999:7:::
+gnats:*:18843:0:99999:7:::
+nobody:*:18843:0:99999:7:::
+_apt:*:18843:0:99999:7:::
+systemd-timesync:*:18843:0:99999:7:::
+systemd-network:*:18843:0:99999:7:::
+systemd-resolve:*:18843:0:99999:7:::
+mysql:!:18843:0:99999:7:::
+tss:*:18843:0:99999:7:::
+strongswan:*:18843:0:99999:7:::
+ntp:*:18843:0:99999:7:::
+messagebus:*:18843:0:99999:7:::
+redsocks:!:18843:0:99999:7:::
+rwhod:*:18843:0:99999:7:::
+iodine:*:18843:0:99999:7:::
+miredo:*:18843:0:99999:7:::
+_rpc:*:18843:0:99999:7:::
+usbmux:*:18843:0:99999:7:::
+tcpdump:*:18843:0:99999:7:::
+rtkit:*:18843:0:99999:7:::
+sshd:*:18843:0:99999:7:::
+statd:*:18843:0:99999:7:::
+postgres:*:18843:0:99999:7:::
+avahi:*:18843:0:99999:7:::
+stunnel4:!:18843:0:99999:7:::
+Debian-snmp:!:18843:0:99999:7:::
+speech-dispatcher:!:18843:0:99999:7:::
+sslh:!:18843:0:99999:7:::
+nm-openvpn:*:18843:0:99999:7:::
+nm-openconnect:*:18843:0:99999:7:::
+pulse:*:18843:0:99999:7:::
+saned:*:18843:0:99999:7:::
+inetsim:*:18843:0:99999:7:::
+colord:*:18843:0:99999:7:::
+geoclue:*:18843:0:99999:7:::
+lightdm:*:18843:0:99999:7:::
+king-phisher:*:18843:0:99999:7:::
+systemd-coredump:!*:18843::::::
+redis:*:19062:0:99999:7:::
+xxx:!:19075:0:99999:7:::
+zzz:$y$j9T$ZojaTotw8XP2yDtykSDoi1$37d6E/zSepbeEUXfsbLIfuYrRvKWtrJRtAupG5NoZA7:19209:0:99999:7:::
+1%linux%root%.bash_history
+sqlmap -r 1.txt --force-ssl --random-agent --dbms=PostgreSQL --proxy="socks5://192.168.182.1:4781" -D public -T BH_CONFIG  --dump
+cd Desktop
+cat 1.txt
+vim shell.c
+cd /etc/nginx/conf.d
+vim zabbix.conf
+service nginx start
+vim zabbix.conf
+service nginx re
+service nginx restart
+vim zabbix.conf
+service nginx restart
+vim zabbix.conf
+nginx -t
+service nginx restart
+apt-get install cmake-curses-gui
+apt-get update
+apt-get install cmake-curses-gui
+exit
+service ssh start
+systemctl enable ssh 
+java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -C "calc.exe"
+service apache2 start
+ifconfig
+cd /var/www/html
+open ./
+service apache2 start
+service nginx status
+cd /etc/nginx
+netstat -ntlp
+service apache2 stop
+cd conf.d
+vim zabbix.conf
+ifconfig
+whaomi
+cat /etc/passwd
+passwd zther0
+ifconfig
+nmap 192.168.241.197 -p 4780
+ping cip.cc
+sqlmap --help
+ifconfig
+cd Desktop
+vim 2.txt
+touch 2.txt
+ifconfig
+apt-get install redis-cli
+./create_dev_user.sh TestUser900 TestUser900
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re --dbs
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql --tabels
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql --tables
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T mysql --columns
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T User --columns
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --columns
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user -h
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user -hh
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump 
+ls
+cd dump
+ls
+cd mysql
+ls
+cat user.csv
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump-file
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --batch 3
+ls
+cat user.csv
+cat user.csv.1
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=1
+ls
+rm user.csv
+rm user.csv.1
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=1
+cat user.csv
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=0 --stop=1
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2
+ls
+cat user.csv
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2 --dump-format
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2 -hh 
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2 -hh  | grep dump
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2 --dump-format SQLITE
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=2 --dump-format CSV
+sqlmap -u "http://127.0.0.1:8888/vul/sqli/sqli_del.php?id=1470" --batch --level=5 --risk=3 --output-dir /root/sql_re -D mysql -T user --dump --start=1 --stop=200 --dump-format CSV
+mysql -h 192.168.10.100 -uroot -p123456999
+
+
+1%linux%root%.ssh%authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3X8P0Dqsr3TbWabA+hMYFElPQaK3aRv0MitXLo2rJXD3CoCcoM/X9p4pMA5vqCQubfoxuC6tmZbFp+RdUuO1ELUZECw4Je1bwymCs///lds4gZGgwDC//AR9HCbK974iOFvySk2D1V9DhG7NhfbzAGfE8M9fPfN1UjpTRa9BxbD0dBYxu9q/cyYpc/byXMSYWbEg++3svheiZpDID8+AV7MnjphG+FdWEhKDoho1Zcd0uYl3ByZJupAItVDzEZ2tkt1acJQavBVc5rY3Vyyhz/i7haTGxH/lHEbjSRLakyXg8yJsGiMCxvDVHROC01orKjFZOIaWCltiRmSJ6jqpV git_ssh_key
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3X8P0Dqsr3TbWabA+hMYFElPQaK3aRv0MitXLo2rJXD3CoCcoM/X9p4pMA5vqCQubfoxuC6tmZbFp+RdUuO1ELUZECw4Je1bwymCs///lds4gZGgwDC//AR9HCbK974iOFvySk2D1V9DhG7NhfbzAGfE8M9fPfN1UjpTRa9BxbD0dBYxu9q/cyYpc/byXMSYWbEg++3svheiZpDID8+AV7MnjphG+FdWEhKDoho1Zcd0uYl3ByZJupAItVDzEZ2tkt1acJQavBVc5rY3Vyyhz/i7haTGxH/lHEbjSRLakyXg8yJsGiMCxvDVHROC01orKjFZOIaWCltiRmSJ6jqpV git_ssh_key
+
+1%linux%root%.ssh%id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+1%linux%root%.ssh%id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCjJ9R7Couzb+0jwPu3KgZ1S4pNGktgVO3PPzU6g9D/77CWr9LaRKYtHEq31Yij/jcxWwqiCpGmq67FqJVqmrFbSwbKJUQSORjiHGe+fdT7szYTBckcwjLn3C+Opued15kW7tc0BlIXoLyBD3ih5Hj9M4wZitA+QyPA+ORWzYKOMZRek760070r6/kl8R4SwC2zQZqmxLnPUx4EaxeSTTWZnmJoKvQ/r3z/hzyWvVRCGGgi76ZqkQkRwLIgvpIRmEF2VpFT5ROZUrUy7tDhZuXL7jXCQHHh17hC7np08u46AQ042VNUV0+Xz99Wz9k1wqDpoIStXrcATU5ZvBKXAuTWiUjXPsTsz6BXXw+Ja4kPkF0ThNBbDTL/+e8520d+e4aJeLsr7lrVvPGNQDkl1UvskjahL+H3Y0NBOlWwNJjmSFfYDQCrVAvjVs0KF16XV4LOtoHAVvCeKAP/TlzF9CvlNUV2+it8KfsHz3yXzWYeI0g/H4qgB8vUeadkfTDQTA0= zther0@DESKTOP-L3C4NM9
+1%linux%var%run%secrets%kubernetes.io%serviceaccount%token
+eyJhbGciOiJIUzI1diJ9.eyJzdWIiOiJuYWNvcyIsImW4cCI6MTY3OTgwNjW1OX0.rACfrGgAIPjWSJT7rOXertLlC03poluW62865YDpXtY1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%.dockerignore
+*/target/debug
+*/target/release
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%Dockerfile
+FROM python:3.8-buster AS builder
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+RUN rustup update
+RUN python3 -m pip install maturin
+
+COPY fasts3/ fasts3/
+RUN cd fasts3 && cargo fmt && maturin build --release
+RUN ls fasts3/target/wheels/
+
+#===========
+FROM python:3.8-buster
+
+RUN python3 -m pip install boto3 fsspec s3fs
+
+COPY --from=builder fasts3/target/wheels/ /
+
+RUN python3 -m pip install /fasts3-*-cp38-*2_28*.whl
+
+ADD *.py /
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%README.md
+# python_fasts3
+Fast S3 in Python using Rust
+
+A Rust library that can be called from Python to perform S3 operations. The goal is to be significantly faster than Python-only S3 code like boto3. Currently only supports very basic ls() and get_objects() functionality and is meant as a POC, not for production usage. This [blog post](https://joshua-robinson.medium.com/improving-python-s3-client-performance-with-rust-e9639359072f) provides more information about the motivation and initial performance results of FastS3.
+
+Using fasts3 from python should be simple and fast:
+```
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+contents = s.get_objects([OBJECTPATH1, OBJECTPATH2])  # Retrieve two objects in parallel
+```
+
+Compile the Rust library into wheel format using maturin:
+```
+cd fasts3/ && maturin build --release
+```
+
+Installation then follows as with any wheel:
+```
+python3 -m pip install fasts3/target/wheels/*.whl
+```
+
+Example output from benchmark program:
+```
+Benchmarking get_object operation
+...
+Rust is 2.2x faster than Python
+Benchmarking list operation
+...
+Rust is 1.8x faster than Boto3 and 1.8x faster than fsspec
+```
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%benchmark.py
+import boto3
+import fasts3
+import fsspec
+import io
+import multiprocessing as mp
+import time
+
+
+# Constants used in testing.
+ENDPOINT_URL='http://10.62.64.207'
+BUCKET="joshuarobinson"
+
+# Small object download and group of object download
+SMALL_OBJECT="2021-06-04-17.03.28.jpg"
+SMALL_PATH=BUCKET + '/' + SMALL_OBJECT
+GROUPPATH="balloons/"
+
+# for list_objects_v2 and ls
+LISTPREFIX="opensky/staging1/movements/"
+LISTPATH=BUCKET + '/' + LISTPREFIX
+
+# Large objects of various sizes
+TEST_OBJECTS = ["foo64m.txt", "foo128m.txt", "foo256m.txt", "foo500m.txt", "foo1g.txt", "foo2g.txt", "foo3g.txt", "foo4g.txt", "foo.txt", "foo10G.txt"]
+
+
+# Initialize boto3, fsspec, and fasts3
+storage_options = {'endpoint_url': ENDPOINT_URL}
+fs = fsspec.filesystem('s3', client_kwargs=storage_options)
+
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+s3r = boto3.resource('s3', endpoint_url=ENDPOINT_URL)
+bucket = s3r.Bucket(BUCKET)
+
+
+print("Benchmarking small get_object operation")
+start = time.time()
+contents = s.get_objects([SMALL_PATH])[0]
+elapsed_rust = time.time() - start
+print("fasts3 small get_object, len={}, {}".format(len(contents), elapsed_rust))
+
+start = time.time()
+bytes_buffer = io.BytesIO()
+s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=SMALL_OBJECT, Fileobj=bytes_buffer)
+elapsed_b = time.time() - start
+print("boto3 small download, len={}, {}".format(bytes_buffer.getbuffer().nbytes, elapsed_b))
+
+start = time.time()
+data = bucket.Object(SMALL_OBJECT).get().get('Body').read()
+elapsed_bg = time.time() - start
+print("boto3 small get, len={}, {}".format(len(data), elapsed_bg))
+
+if bytes_buffer.getbuffer() != contents:
+    print("Error, mismatched contents")
+    exit()
+
+print("Rust is {:.1f}x faster than Python download_fileobj and {:.1f}x faster than Python get".format(elapsed_b / elapsed_rust, elapsed_bg / elapsed_rust))
+
+
+print("Benchmarking group get_object operation")
+
+IMGPATH=BUCKET + "/" + GROUPPATH
+image_keys = s.ls(IMGPATH)
+image_paths = [BUCKET + '/' + p for p in image_keys]
+
+s.get_objects(image_paths)  # Cache warming
+
+start = time.time()
+contents = s.get_objects(image_paths)
+elapsed_rust = time.time() - start
+print("fasts3 download group, len={}, {}".format(len(contents), elapsed_rust))
+
+# Define boto3 download function so it can be used by Threadpool map()
+def do_boto3_download(key: str):
+    bytes_buffer = io.BytesIO()
+    s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=key, Fileobj=bytes_buffer)
+    return bytes_buffer.getbuffer()
+
+pool = mp.pool.ThreadPool()
+start = time.time()
+pycontents = pool.map(do_boto3_download, image_keys)
+elapsed_b = time.time() - start
+print("boto3 download group, len={}, {}".format(len(pycontents), elapsed_b))
+
+if len(pycontents) != len(contents):
+    print("ERROR, wrong number of files returned")
+    exit()
+
+for a,b in zip(pycontents, contents):
+    if a != b:
+        print("ERROR, mismatched contents!")
+        exit()
+
+print("Rust is {:.1f}x faster than Python".format(elapsed_b / elapsed_rust))
+
+
+print("Benchmarking large get_object operation")
+
+for _ in range(3):
+    for object_key in TEST_OBJECTS:
+        object_path = BUCKET + '/' + object_key
+        print(object_path)
+
+        start = time.time()
+        contents = s.get_objects([object_path])[0]
+        elapsed_rust = time.time() - start
+        print("fasts3 large get_object, len={}, {}".format(len(contents), elapsed_rust))
+
+        start = time.time()
+        with fs.open('/' + object_path) as fp:
+            foo = fp.read()
+        elapsed_fs = time.time() - start
+        print("Download-fsspec ", elapsed_fs)
+
+        start = time.time()
+        bytes_buffer = io.BytesIO()
+        s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=object_key, Fileobj=bytes_buffer)
+        elapsed_b = time.time() - start
+        print("boto3 large download, len={}, {}".format(bytes_buffer.getbuffer().nbytes, elapsed_b))
+
+        start = time.time()
+        data = bucket.Object(object_key).get().get('Body').read()
+        elapsed_bg = time.time() - start
+        print("boto3 large get, len={}, {}".format(len(data), elapsed_bg))
+
+        if bytes_buffer.getbuffer() != contents:
+            print("ERROR, mismatched contents")
+            exit()
+
+        object_size_mb = len(contents) / (1024 * 1024)
+        print("Rust is {:.1f}x faster than Python download_fileobj and {:.1f}x faster than Python get".format(elapsed_b / elapsed_rust, elapsed_bg / elapsed_rust))
+        # Print in a manner that can be easily converted to CSV for plotting
+        print("RESULT-get,{:.1f},{},{},{},{}".format(object_size_mb, elapsed_fs, elapsed_bg, elapsed_b, elapsed_rust))
+
+
+
+print("Benchmarking list operation")
+start = time.time()
+listingc = fs.ls(LISTPATH)
+elapsed_fs = time.time() - start
+print("fsspec-s3 ls, len={}, {}".format(len(listingc), elapsed_fs))
+
+start = time.time()
+listing = s.ls(LISTPATH)
+elapsed_rust = time.time() - start
+print("fasts3 ls, len={}, {}".format(len(listing), elapsed_rust))
+
+start = time.time()
+paginator = s3r.meta.client.get_paginator('list_objects_v2')
+pages = paginator.paginate(Bucket=BUCKET, Prefix=LISTPREFIX)
+# The line below assumes at least one key returned.
+listingb = [obj['Key'] for page in pages for obj in page['Contents']]
+elapsed_py = time.time() - start
+print("boto3 ls, len={}, {}".format(len(listingb), elapsed_py))
+    
+print("Rust ls() is {:.1f}x faster than Boto3 and {:.1f}x faster than fsspec".format(elapsed_py / elapsed_rust, elapsed_fs / elapsed_rust))
+print("RESULT-ls,{},{},{},{}".format(len(listing), elapsed_fs, elapsed_py, elapsed_rust))
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%build_image.sh
+#!/bin/bash
+
+set -e
+
+TAG=pyo3-test
+REPONAME=joshuarobinson
+
+docker build -t $TAG --file Dockerfile .
+
+# Tag and push to a public docker repository.
+docker tag $TAG $REPONAME/$TAG
+#docker push $REPONAME/$TAG
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%regression_test.py
+import boto3
+import fasts3
+import fsspec
+import random
+
+ENDPOINT_URL='http://local-minio:9000'
+BUCKET="testbucket"
+
+s3r = boto3.resource('s3', endpoint_url=ENDPOINT_URL)
+
+s3r.create_bucket(Bucket=BUCKET)
+
+storage_options = {'endpoint_url': ENDPOINT_URL}
+fs = fsspec.filesystem('s3', client_kwargs=storage_options)
+
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+#######
+
+# Initialize data on the remote (test) object store
+random.seed(0)
+BUFFERSIZE = 2 * 1024 * 1024
+large_buffer = bytearray(random.getrandbits(8) for _ in range(BUFFERSIZE * 256 + 67891))
+
+src_buffers = [bytearray(random.getrandbits(8) for _ in range(BUFFERSIZE)) for _ in range(10)]
+
+for i in range(len(src_buffers)):
+    obj = s3r.Object(BUCKET, "test-" + str(i))
+    obj.put(Body=src_buffers[i])
+
+
+## BEGIN test scenarios
+paginator = s3r.meta.client.get_paginator('list_objects_v2')
+pages = paginator.paginate(Bucket=BUCKET, Prefix='')
+listingb = [obj['Key'] for page in pages for obj in page['Contents']]
+print(listingb)
+
+assert len(listingb) == len(src_buffers), "FAIL on returned number of objects from list"
+
+contents = s.get_objects([BUCKET + '/' + "test-" + str(i) for i in range(len(src_buffers))])
+
+assert len(contents) == len(src_buffers), "FAIL on returning all object contents"
+
+for i in range(len(src_buffers)):
+    assert contents[i] == src_buffers[i], "FAIL, content mismatch on object {}".format(i)
+    
+obj = s3r.Object(BUCKET, "test-big")
+obj.put(Body=large_buffer)
+
+BIGPATH=BUCKET + "/test-big"
+contents = s.get_objects([BIGPATH])[0]
+assert contents == large_buffer, "FAIL on large buffer content match"
+
+stat = fs.info(BIGPATH)
+
+fast_stat = s.info(BIGPATH)
+print(fast_stat)
+
+# Skipping LastModified for now because of timezone support.
+keys_to_check = ["Key", "ETag", "Size", "StorageClass", "VersionId"]
+for k in keys_to_check:
+    assert stat[k] == fast_stat[k], "FAIL on {}".format(k)
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%run_benchmark.sh
+#!/bin/bash
+
+IMG="pyo3-test"
+
+docker run -it --rm  --name fasts3-bench \
+    --env-file ./credentials \
+    $IMG \
+    python3 /benchmark.py
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%run_regression.sh
+#!/bin/bash
+
+IMG="pyo3-test"
+MINIO_IMG=quay.io/minio/minio
+
+ACCESSKEY="AKIAIOSFODMM7EXAMPLE"
+SECRETKEY="wJalrXUtnFEMI/K7MDENG/bQxRfiCYEXAMPLEKEY"
+
+echo "Starting local minio instance"
+docker run --rm -d --name local-minio \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  -e "MINIO_ROOT_USER=$ACCESSKEY" \
+  -e "MINIO_ROOT_PASSWORD=$SECRETKEY" \
+  $MINIO_IMG server /data --console-address ":9001"
+
+echo "Starting fasts3 test client"
+docker run -it --rm  --name fasts3-test \
+    --link local-minio:local-minio \
+    -e "AWS_ACCESS_KEY_ID=$ACCESSKEY" \
+    -e "AWS_SECRET_ACCESS_KEY=$SECRETKEY" \
+    $IMG \
+    python3 /regression_test.py
+
+echo "Finished, now shutting down local minio."
+docker stop local-minio
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%fasts3%.gitignore
+/target
+Cargo.lock
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%fasts3%Cargo.toml
+[package]
+name = "fasts3"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "fasts3"
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pyo3 = { version = "0.15.1", features = ["extension-module"] }
+#pyo3-asyncio = { version = "0.15.0", features = ["attributes", "tokio-runtime"] }
+aws-config = "0.51.0"
+aws-sdk-s3 = "0.21.0"
+aws-endpoint = "0.51.0"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+http = "0.2"
+futures = "0.3"
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%fasts3%rustfmt.toml
+max_width = 120
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%fasts3%src%fasts3_filesystem.rs
+use pyo3::exceptions::PyIOError;
+use pyo3::prelude::*;
+use pyo3::types::{IntoPyDict, PyByteArray, PyDateTime, PyList};
+
+use aws_sdk_s3::types::ByteStream;
+use aws_sdk_s3::{Client, Endpoint, Error, Region};
+use futures::future::try_join_all;
+use http::Uri;
+use tokio_stream::StreamExt;
+
+const READCHUNK: usize = 1024 * 1024 * 128;
+
+#[allow(dead_code)]
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>())
+}
+
+#[pyclass]
+pub struct FastS3FileSystem {
+    #[pyo3(get, set)]
+    pub endpoint: String,
+
+    s3_client: aws_sdk_s3::Client,
+}
+
+fn build_client(endpoint: &str) -> aws_sdk_s3::Client {
+    let region = Region::new("us-west-2");
+
+    let rt = tokio::runtime::Runtime::new().unwrap();
+    let conf = rt.block_on(async { aws_config::load_from_env().await });
+
+    let s3_conf = match endpoint.is_empty() {
+        true => aws_sdk_s3::config::Builder::from(&conf).region(region).build(),
+        false => aws_sdk_s3::config::Builder::from(&conf)
+            .endpoint_resolver(Endpoint::immutable(endpoint.parse::<Uri>().unwrap()))
+            .region(region)
+            .build(),
+    };
+
+    Client::from_conf(s3_conf)
+}
+
+impl FastS3FileSystem {
+    fn get_client(&self) -> &aws_sdk_s3::Client {
+        &self.s3_client
+    }
+}
+
+// Extract path into bucket + prefix
+fn path_to_bucketprefix(path: &String) -> (String, String) {
+    let s3path = std::path::Path::new(path);
+    let mut path_it = s3path.iter();
+    let bucket = path_it.next().unwrap().to_str().unwrap();
+    let mut prefix_path = std::path::PathBuf::new();
+    for p in path_it {
+        prefix_path.push(p);
+    }
+    let mut prefix = prefix_path.to_str().unwrap().to_string();
+    if path.ends_with('/') {
+        prefix.push('/');
+    }
+
+    (bucket.to_string(), prefix)
+}
+
+// Write contents of ByteStream into destination buffer.
+async fn drain_stream(mut s: ByteStream, dest: &mut [u8]) -> Result<usize, Error> {
+    let mut offset = 0;
+    while let Ok(Some(bytes)) = s.try_next().await {
+        let span = offset..offset + bytes.len();
+        dest[span].clone_from_slice(&bytes);
+        offset += bytes.len();
+    }
+    Ok(offset)
+}
+
+#[pymethods]
+impl FastS3FileSystem {
+    #[new]
+    pub fn new(endpoint: String) -> FastS3FileSystem {
+        let c = build_client(&endpoint);
+        FastS3FileSystem {
+            endpoint: endpoint,
+            s3_client: c,
+        }
+    }
+
+    pub fn ls(&self, path: &str) -> PyResult<Vec<String>> {
+        let (bucket, prefix) = path_to_bucketprefix(&path.to_string());
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let listing = rt.block_on(async {
+            let mut page_stream = client
+                .list_objects_v2()
+                .bucket(&bucket)
+                .prefix(&prefix)
+                .delimiter('/')
+                .into_paginator()
+                .send();
+
+            let mut listing: Vec<String> = Vec::new();
+            while let Some(Ok(lp)) = page_stream.next().await {
+                for object in lp.contents().unwrap_or_default() {
+                    let key = object.key().unwrap_or_default();
+                    listing.push(key.to_string());
+                }
+            }
+            Ok(listing)
+        });
+        listing
+    }
+
+    pub fn info(&self, py: Python, path: &str) -> PyResult<PyObject> {
+        let (bucket, key) = path_to_bucketprefix(&path.to_string());
+        let mut key_vals: Vec<(&str, PyObject)> = vec![("Key", path.to_object(py))];
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let _info_result = rt.block_on(async {
+            let res = match client.head_object().bucket(bucket).key(key).send().await {
+                Ok(r) => r,
+                Err(e) => return Err(PyIOError::new_err(e.to_string())),
+            };
+            key_vals.push(("Size", res.content_length.to_object(py)));
+            if let Some(etag) = res.e_tag {
+                key_vals.push(("ETag", etag.to_object(py)));
+            }
+            if let Some(mtime) = res.last_modified {
+                let pytime = PyDateTime::from_timestamp(py, mtime.secs() as f64, None)?;
+                key_vals.push(("LastModified", pytime.to_object(py)));
+            }
+            if let Some(ver) = res.version_id {
+                key_vals.push(("VersionId", ver.to_object(py)));
+            } else {
+                key_vals.push(("VersionId", py.None()));
+            }
+            if let Some(sc) = res.storage_class {
+                key_vals.push(("StorageClass", sc.as_str().to_object(py)));
+            } else {
+                // Default to standard because s3fs does.
+                key_vals.push(("StorageClass", "STANDARD".to_object(py)));
+            }
+            // Several fields not implemented, like custom metadata.
+
+            Ok(())
+        });
+        let dict = key_vals.into_py_dict(py);
+        Ok(dict.into())
+    }
+
+    pub fn get_objects(&self, py: Python, paths: Vec<String>) -> PyResult<PyObject> {
+        let pathpairs: Vec<(String, String)> = paths.iter().map(path_to_bucketprefix).collect();
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let mut pybuf_list = Vec::new();
+        for _ in &pathpairs {
+            pybuf_list.push(PyByteArray::new(py, &[]));
+        }
+
+        let return_buf = rt.block_on(async {
+            let mut head_reqs = vec![];
+            for (bucket, key) in &pathpairs {
+                head_reqs.push(client.head_object().bucket(bucket).key(key).send());
+            }
+            let head_results = match try_join_all(head_reqs).await {
+                Ok(r) => r,
+                Err(e) => return Err(PyIOError::new_err(e.to_string())),
+            };
+            let obj_sizes: Vec<usize> = head_results.iter().map(|x| x.content_length() as usize).collect();
+
+            for (p, o) in pybuf_list.iter_mut().zip(obj_sizes) {
+                p.resize(o)?;
+            }
+
+            let mut read_reqs = vec![];
+
+            for (pybuf, (bucket, key)) in pybuf_list.iter_mut().zip(&pathpairs) {
+                let obj_size = pybuf.len();
+                let landing_buf = unsafe { pybuf.as_bytes_mut() };
+                let mut landing_slices: Vec<&mut [u8]> = landing_buf.chunks_mut(READCHUNK).collect();
+
+                let mut read_offset = 0;
+                while read_offset < obj_size {
+                    let read_upper = std::cmp::min(obj_size, read_offset + READCHUNK);
+                    let byte_range = format!("bytes={}-{}", read_offset, read_upper - 1);
+
+                    let resp = match client
+                        .get_object()
+                        .bucket(bucket)
+                        .key(key)
+                        .range(byte_range)
+                        .send()
+                        .await
+                    {
+                        Ok(r) => r,
+                        Err(e) => return Err(PyIOError::new_err(e.to_string())),
+                    };
+
+                    read_reqs.push(drain_stream(resp.body, landing_slices.remove(0)));
+
+                    read_offset += READCHUNK;
+                }
+            }
+            let _results = try_join_all(read_reqs).await.unwrap();
+
+            let pybufs: &PyList = PyList::new(py, pybuf_list);
+            Ok(pybufs)
+        });
+
+        match return_buf {
+            Ok(b) => Ok(b.into()),
+            Err(e) => Err(e),
+        }
+    }
+}
+1%包含敏感信息的源码%python_fasts3-main%python_fasts3-main%fasts3%src%lib.rs
+use pyo3::prelude::*;
+
+mod fasts3_filesystem;
+use crate::fasts3_filesystem::FastS3FileSystem;
+
+/// A Python module implemented in Rust. The name of this function must match
+/// the `lib.name` setting in the `Cargo.toml`, else Python will not be able to
+/// import the module.
+#[pymodule]
+fn fasts3(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<FastS3FileSystem>()?;
+
+    Ok(())
+}
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%.dockerignore
+*/target/debug
+*/target/release
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%Dockerfile
+FROM python:3.8-buster AS builder
+
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | bash -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+RUN rustup update
+RUN python3 -m pip install maturin
+
+COPY fasts3/ fasts3/
+RUN cd fasts3 && cargo fmt && maturin build --release
+RUN ls fasts3/target/wheels/
+
+#===========
+FROM python:3.8-buster
+
+RUN python3 -m pip install boto3 fsspec s3fs
+
+COPY --from=builder fasts3/target/wheels/ /
+
+RUN python3 -m pip install /fasts3-*-cp38-*2_28*.whl
+
+ADD *.py /
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%README.md
+# python_fasts3
+Fast S3 in Python using Rust
+
+A Rust library that can be called from Python to perform S3 operations. The goal is to be significantly faster than Python-only S3 code like boto3. Currently only supports very basic ls() and get_objects() functionality and is meant as a POC, not for production usage. This [blog post](https://joshua-robinson.medium.com/improving-python-s3-client-performance-with-rust-e9639359072f) provides more information about the motivation and initial performance results of FastS3.
+
+Using fasts3 from python should be simple and fast:
+```
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+contents = s.get_objects([OBJECTPATH1, OBJECTPATH2])  # Retrieve two objects in parallel
+```
+
+Compile the Rust library into wheel format using maturin:
+```
+cd fasts3/ && maturin build --release
+```
+
+Installation then follows as with any wheel:
+```
+python3 -m pip install fasts3/target/wheels/*.whl
+```
+
+Example output from benchmark program:
+```
+Benchmarking get_object operation
+...
+Rust is 2.2x faster than Python
+Benchmarking list operation
+...
+Rust is 1.8x faster than Boto3 and 1.8x faster than fsspec
+```
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%benchmark.py
+import boto3
+import fasts3
+import fsspec
+import io
+import multiprocessing as mp
+import time
+
+
+# Constants used in testing.
+ENDPOINT_URL='http://10.62.64.207'
+BUCKET="joshuarobinson"
+
+# Small object download and group of object download
+SMALL_OBJECT="2021-06-04-17.03.28.jpg"
+SMALL_PATH=BUCKET + '/' + SMALL_OBJECT
+GROUPPATH="balloons/"
+
+# for list_objects_v2 and ls
+LISTPREFIX="opensky/staging1/movements/"
+LISTPATH=BUCKET + '/' + LISTPREFIX
+
+# Large objects of various sizes
+TEST_OBJECTS = ["foo64m.txt", "foo128m.txt", "foo256m.txt", "foo500m.txt", "foo1g.txt", "foo2g.txt", "foo3g.txt", "foo4g.txt", "foo.txt", "foo10G.txt"]
+
+
+# Initialize boto3, fsspec, and fasts3
+storage_options = {'endpoint_url': ENDPOINT_URL}
+fs = fsspec.filesystem('s3', client_kwargs=storage_options)
+
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+s3r = boto3.resource('s3', endpoint_url=ENDPOINT_URL)
+bucket = s3r.Bucket(BUCKET)
+
+
+print("Benchmarking small get_object operation")
+start = time.time()
+contents = s.get_objects([SMALL_PATH])[0]
+elapsed_rust = time.time() - start
+print("fasts3 small get_object, len={}, {}".format(len(contents), elapsed_rust))
+
+start = time.time()
+bytes_buffer = io.BytesIO()
+s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=SMALL_OBJECT, Fileobj=bytes_buffer)
+elapsed_b = time.time() - start
+print("boto3 small download, len={}, {}".format(bytes_buffer.getbuffer().nbytes, elapsed_b))
+
+start = time.time()
+data = bucket.Object(SMALL_OBJECT).get().get('Body').read()
+elapsed_bg = time.time() - start
+print("boto3 small get, len={}, {}".format(len(data), elapsed_bg))
+
+if bytes_buffer.getbuffer() != contents:
+    print("Error, mismatched contents")
+    exit()
+
+print("Rust is {:.1f}x faster than Python download_fileobj and {:.1f}x faster than Python get".format(elapsed_b / elapsed_rust, elapsed_bg / elapsed_rust))
+
+
+print("Benchmarking group get_object operation")
+
+IMGPATH=BUCKET + "/" + GROUPPATH
+image_keys = s.ls(IMGPATH)
+image_paths = [BUCKET + '/' + p for p in image_keys]
+
+s.get_objects(image_paths)  # Cache warming
+
+start = time.time()
+contents = s.get_objects(image_paths)
+elapsed_rust = time.time() - start
+print("fasts3 download group, len={}, {}".format(len(contents), elapsed_rust))
+
+# Define boto3 download function so it can be used by Threadpool map()
+def do_boto3_download(key: str):
+    bytes_buffer = io.BytesIO()
+    s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=key, Fileobj=bytes_buffer)
+    return bytes_buffer.getbuffer()
+
+pool = mp.pool.ThreadPool()
+start = time.time()
+pycontents = pool.map(do_boto3_download, image_keys)
+elapsed_b = time.time() - start
+print("boto3 download group, len={}, {}".format(len(pycontents), elapsed_b))
+
+if len(pycontents) != len(contents):
+    print("ERROR, wrong number of files returned")
+    exit()
+
+for a,b in zip(pycontents, contents):
+    if a != b:
+        print("ERROR, mismatched contents!")
+        exit()
+
+print("Rust is {:.1f}x faster than Python".format(elapsed_b / elapsed_rust))
+
+
+print("Benchmarking large get_object operation")
+
+for _ in range(3):
+    for object_key in TEST_OBJECTS:
+        object_path = BUCKET + '/' + object_key
+        print(object_path)
+
+        start = time.time()
+        contents = s.get_objects([object_path])[0]
+        elapsed_rust = time.time() - start
+        print("fasts3 large get_object, len={}, {}".format(len(contents), elapsed_rust))
+
+        start = time.time()
+        with fs.open('/' + object_path) as fp:
+            foo = fp.read()
+        elapsed_fs = time.time() - start
+        print("Download-fsspec ", elapsed_fs)
+
+        start = time.time()
+        bytes_buffer = io.BytesIO()
+        s3r.meta.client.download_fileobj(Bucket=BUCKET, Key=object_key, Fileobj=bytes_buffer)
+        elapsed_b = time.time() - start
+        print("boto3 large download, len={}, {}".format(bytes_buffer.getbuffer().nbytes, elapsed_b))
+
+        start = time.time()
+        data = bucket.Object(object_key).get().get('Body').read()
+        elapsed_bg = time.time() - start
+        print("boto3 large get, len={}, {}".format(len(data), elapsed_bg))
+
+        if bytes_buffer.getbuffer() != contents:
+            print("ERROR, mismatched contents")
+            exit()
+
+        object_size_mb = len(contents) / (1024 * 1024)
+        print("Rust is {:.1f}x faster than Python download_fileobj and {:.1f}x faster than Python get".format(elapsed_b / elapsed_rust, elapsed_bg / elapsed_rust))
+        # Print in a manner that can be easily converted to CSV for plotting
+        print("RESULT-get,{:.1f},{},{},{},{}".format(object_size_mb, elapsed_fs, elapsed_bg, elapsed_b, elapsed_rust))
+
+
+
+print("Benchmarking list operation")
+start = time.time()
+listingc = fs.ls(LISTPATH)
+elapsed_fs = time.time() - start
+print("fsspec-s3 ls, len={}, {}".format(len(listingc), elapsed_fs))
+
+start = time.time()
+listing = s.ls(LISTPATH)
+elapsed_rust = time.time() - start
+print("fasts3 ls, len={}, {}".format(len(listing), elapsed_rust))
+
+start = time.time()
+paginator = s3r.meta.client.get_paginator('list_objects_v2')
+pages = paginator.paginate(Bucket=BUCKET, Prefix=LISTPREFIX)
+# The line below assumes at least one key returned.
+listingb = [obj['Key'] for page in pages for obj in page['Contents']]
+elapsed_py = time.time() - start
+print("boto3 ls, len={}, {}".format(len(listingb), elapsed_py))
+    
+print("Rust ls() is {:.1f}x faster than Boto3 and {:.1f}x faster than fsspec".format(elapsed_py / elapsed_rust, elapsed_fs / elapsed_rust))
+print("RESULT-ls,{},{},{},{}".format(len(listing), elapsed_fs, elapsed_py, elapsed_rust))
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%build_image.sh
+#!/bin/bash
+
+set -e
+
+TAG=pyo3-test
+REPONAME=joshuarobinson
+
+docker build -t $TAG --file Dockerfile .
+
+# Tag and push to a public docker repository.
+docker tag $TAG $REPONAME/$TAG
+#docker push $REPONAME/$TAG
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%regression_test.py
+import boto3
+import fasts3
+import fsspec
+import random
+
+ENDPOINT_URL='http://local-minio:9000'
+BUCKET="testbucket"
+
+s3r = boto3.resource('s3', endpoint_url=ENDPOINT_URL)
+
+s3r.create_bucket(Bucket=BUCKET)
+
+storage_options = {'endpoint_url': ENDPOINT_URL}
+fs = fsspec.filesystem('s3', client_kwargs=storage_options)
+
+s = fasts3.FastS3FileSystem(endpoint=ENDPOINT_URL)
+
+#######
+
+# Initialize data on the remote (test) object store
+random.seed(0)
+BUFFERSIZE = 2 * 1024 * 1024
+large_buffer = bytearray(random.getrandbits(8) for _ in range(BUFFERSIZE * 256 + 67891))
+
+src_buffers = [bytearray(random.getrandbits(8) for _ in range(BUFFERSIZE)) for _ in range(10)]
+
+for i in range(len(src_buffers)):
+    obj = s3r.Object(BUCKET, "test-" + str(i))
+    obj.put(Body=src_buffers[i])
+
+
+## BEGIN test scenarios
+paginator = s3r.meta.client.get_paginator('list_objects_v2')
+pages = paginator.paginate(Bucket=BUCKET, Prefix='')
+listingb = [obj['Key'] for page in pages for obj in page['Contents']]
+print(listingb)
+
+assert len(listingb) == len(src_buffers), "FAIL on returned number of objects from list"
+
+contents = s.get_objects([BUCKET + '/' + "test-" + str(i) for i in range(len(src_buffers))])
+
+assert len(contents) == len(src_buffers), "FAIL on returning all object contents"
+
+for i in range(len(src_buffers)):
+    assert contents[i] == src_buffers[i], "FAIL, content mismatch on object {}".format(i)
+    
+obj = s3r.Object(BUCKET, "test-big")
+obj.put(Body=large_buffer)
+
+BIGPATH=BUCKET + "/test-big"
+contents = s.get_objects([BIGPATH])[0]
+assert contents == large_buffer, "FAIL on large buffer content match"
+
+stat = fs.info(BIGPATH)
+
+fast_stat = s.info(BIGPATH)
+print(fast_stat)
+
+# Skipping LastModified for now because of timezone support.
+keys_to_check = ["Key", "ETag", "Size", "StorageClass", "VersionId"]
+for k in keys_to_check:
+    assert stat[k] == fast_stat[k], "FAIL on {}".format(k)
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%run_benchmark.sh
+#!/bin/bash
+
+IMG="pyo3-test"
+
+docker run -it --rm  --name fasts3-bench \
+    --env-file ./credentials \
+    $IMG \
+    python3 /benchmark.py
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%run_regression.sh
+#!/bin/bash
+
+IMG="pyo3-test"
+MINIO_IMG=quay.io/minio/minio
+
+ACCESSKEY="AKIAIOSFODMM7EXAMPLE"
+SECRETKEY="wJalrXUtnFEMI/K7MDENG/bQxRfiCYEXAMPLEKEY"
+
+echo "Starting local minio instance"
+docker run --rm -d --name local-minio \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  -e "MINIO_ROOT_USER=$ACCESSKEY" \
+  -e "MINIO_ROOT_PASSWORD=$SECRETKEY" \
+  $MINIO_IMG server /data --console-address ":9001"
+
+echo "Starting fasts3 test client"
+docker run -it --rm  --name fasts3-test \
+    --link local-minio:local-minio \
+    -e "AWS_ACCESS_KEY_ID=$ACCESSKEY" \
+    -e "AWS_SECRET_ACCESS_KEY=$SECRETKEY" \
+    $IMG \
+    python3 /regression_test.py
+
+echo "Finished, now shutting down local minio."
+docker stop local-minio
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%fasts3%.gitignore
+/target
+Cargo.lock
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%fasts3%Cargo.toml
+[package]
+name = "fasts3"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "fasts3"
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pyo3 = { version = "0.15.1", features = ["extension-module"] }
+#pyo3-asyncio = { version = "0.15.0", features = ["attributes", "tokio-runtime"] }
+aws-config = "0.51.0"
+aws-sdk-s3 = "0.21.0"
+aws-endpoint = "0.51.0"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+http = "0.2"
+futures = "0.3"
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%fasts3%rustfmt.toml
+max_width = 120
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%fasts3%src%fasts3_filesystem.rs
+use pyo3::exceptions::PyIOError;
+use pyo3::prelude::*;
+use pyo3::types::{IntoPyDict, PyByteArray, PyDateTime, PyList};
+
+use aws_sdk_s3::types::ByteStream;
+use aws_sdk_s3::{Client, Endpoint, Error, Region};
+use futures::future::try_join_all;
+use http::Uri;
+use tokio_stream::StreamExt;
+
+const READCHUNK: usize = 1024 * 1024 * 128;
+
+#[allow(dead_code)]
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>())
+}
+
+#[pyclass]
+pub struct FastS3FileSystem {
+    #[pyo3(get, set)]
+    pub endpoint: String,
+
+    s3_client: aws_sdk_s3::Client,
+}
+
+fn build_client(endpoint: &str) -> aws_sdk_s3::Client {
+    let region = Region::new("us-west-2");
+
+    let rt = tokio::runtime::Runtime::new().unwrap();
+    let conf = rt.block_on(async { aws_config::load_from_env().await });
+
+    let s3_conf = match endpoint.is_empty() {
+        true => aws_sdk_s3::config::Builder::from(&conf).region(region).build(),
+        false => aws_sdk_s3::config::Builder::from(&conf)
+            .endpoint_resolver(Endpoint::immutable(endpoint.parse::<Uri>().unwrap()))
+            .region(region)
+            .build(),
+    };
+
+    Client::from_conf(s3_conf)
+}
+
+impl FastS3FileSystem {
+    fn get_client(&self) -> &aws_sdk_s3::Client {
+        &self.s3_client
+    }
+}
+
+// Extract path into bucket + prefix
+fn path_to_bucketprefix(path: &String) -> (String, String) {
+    let s3path = std::path::Path::new(path);
+    let mut path_it = s3path.iter();
+    let bucket = path_it.next().unwrap().to_str().unwrap();
+    let mut prefix_path = std::path::PathBuf::new();
+    for p in path_it {
+        prefix_path.push(p);
+    }
+    let mut prefix = prefix_path.to_str().unwrap().to_string();
+    if path.ends_with('/') {
+        prefix.push('/');
+    }
+
+    (bucket.to_string(), prefix)
+}
+
+// Write contents of ByteStream into destination buffer.
+async fn drain_stream(mut s: ByteStream, dest: &mut [u8]) -> Result<usize, Error> {
+    let mut offset = 0;
+    while let Ok(Some(bytes)) = s.try_next().await {
+        let span = offset..offset + bytes.len();
+        dest[span].clone_from_slice(&bytes);
+        offset += bytes.len();
+    }
+    Ok(offset)
+}
+
+#[pymethods]
+impl FastS3FileSystem {
+    #[new]
+    pub fn new(endpoint: String) -> FastS3FileSystem {
+        let c = build_client(&endpoint);
+        FastS3FileSystem {
+            endpoint: endpoint,
+            s3_client: c,
+        }
+    }
+
+    pub fn ls(&self, path: &str) -> PyResult<Vec<String>> {
+        let (bucket, prefix) = path_to_bucketprefix(&path.to_string());
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let listing = rt.block_on(async {
+            let mut page_stream = client
+                .list_objects_v2()
+                .bucket(&bucket)
+                .prefix(&prefix)
+                .delimiter('/')
+                .into_paginator()
+                .send();
+
+            let mut listing: Vec<String> = Vec::new();
+            while let Some(Ok(lp)) = page_stream.next().await {
+                for object in lp.contents().unwrap_or_default() {
+                    let key = object.key().unwrap_or_default();
+                    listing.push(key.to_string());
+                }
+            }
+            Ok(listing)
+        });
+        listing
+    }
+
+    pub fn info(&self, py: Python, path: &str) -> PyResult<PyObject> {
+        let (bucket, key) = path_to_bucketprefix(&path.to_string());
+        let mut key_vals: Vec<(&str, PyObject)> = vec![("Key", path.to_object(py))];
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let _info_result = rt.block_on(async {
+            let res = match client.head_object().bucket(bucket).key(key).send().await {
+                Ok(r) => r,
+                Err(e) => return Err(PyIOError::new_err(e.to_string())),
+            };
+            key_vals.push(("Size", res.content_length.to_object(py)));
+            if let Some(etag) = res.e_tag {
+                key_vals.push(("ETag", etag.to_object(py)));
+            }
+            if let Some(mtime) = res.last_modified {
+                let pytime = PyDateTime::from_timestamp(py, mtime.secs() as f64, None)?;
+                key_vals.push(("LastModified", pytime.to_object(py)));
+            }
+            if let Some(ver) = res.version_id {
+                key_vals.push(("VersionId", ver.to_object(py)));
+            } else {
+                key_vals.push(("VersionId", py.None()));
+            }
+            if let Some(sc) = res.storage_class {
+                key_vals.push(("StorageClass", sc.as_str().to_object(py)));
+            } else {
+                // Default to standard because s3fs does.
+                key_vals.push(("StorageClass", "STANDARD".to_object(py)));
+            }
+            // Several fields not implemented, like custom metadata.
+
+            Ok(())
+        });
+        let dict = key_vals.into_py_dict(py);
+        Ok(dict.into())
+    }
+
+    pub fn get_objects(&self, py: Python, paths: Vec<String>) -> PyResult<PyObject> {
+        let pathpairs: Vec<(String, String)> = paths.iter().map(path_to_bucketprefix).collect();
+
+        let client = self.get_client();
+        let rt = tokio::runtime::Runtime::new().unwrap();
+
+        let mut pybuf_list = Vec::new();
+        for _ in &pathpairs {
+            pybuf_list.push(PyByteArray::new(py, &[]));
+        }
+
+        let return_buf = rt.block_on(async {
+            let mut head_reqs = vec![];
+            for (bucket, key) in &pathpairs {
+                head_reqs.push(client.head_object().bucket(bucket).key(key).send());
+            }
+            let head_results = match try_join_all(head_reqs).await {
+                Ok(r) => r,
+                Err(e) => return Err(PyIOError::new_err(e.to_string())),
+            };
+            let obj_sizes: Vec<usize> = head_results.iter().map(|x| x.content_length() as usize).collect();
+
+            for (p, o) in pybuf_list.iter_mut().zip(obj_sizes) {
+                p.resize(o)?;
+            }
+
+            let mut read_reqs = vec![];
+
+            for (pybuf, (bucket, key)) in pybuf_list.iter_mut().zip(&pathpairs) {
+                let obj_size = pybuf.len();
+                let landing_buf = unsafe { pybuf.as_bytes_mut() };
+                let mut landing_slices: Vec<&mut [u8]> = landing_buf.chunks_mut(READCHUNK).collect();
+
+                let mut read_offset = 0;
+                while read_offset < obj_size {
+                    let read_upper = std::cmp::min(obj_size, read_offset + READCHUNK);
+                    let byte_range = format!("bytes={}-{}", read_offset, read_upper - 1);
+
+                    let resp = match client
+                        .get_object()
+                        .bucket(bucket)
+                        .key(key)
+                        .range(byte_range)
+                        .send()
+                        .await
+                    {
+                        Ok(r) => r,
+                        Err(e) => return Err(PyIOError::new_err(e.to_string())),
+                    };
+
+                    read_reqs.push(drain_stream(resp.body, landing_slices.remove(0)));
+
+                    read_offset += READCHUNK;
+                }
+            }
+            let _results = try_join_all(read_reqs).await.unwrap();
+
+            let pybufs: &PyList = PyList::new(py, pybuf_list);
+            Ok(pybufs)
+        });
+
+        match return_buf {
+            Ok(b) => Ok(b.into()),
+            Err(e) => Err(e),
+        }
+    }
+}
+1%包含敏感信息的源码%python_fasts3-main_zip%python_fasts3-main%fasts3%src%lib.rs
+use pyo3::prelude::*;
+
+mod fasts3_filesystem;
+use crate::fasts3_filesystem::FastS3FileSystem;
+
+/// A Python module implemented in Rust. The name of this function must match
+/// the `lib.name` setting in the `Cargo.toml`, else Python will not be able to
+/// import the module.
+#[pymodule]
+fn fasts3(_py: Python, m: &PyModule) -> PyResult<()> {
+    m.add_class::<FastS3FileSystem>()?;
+
+    Ok(())
+}

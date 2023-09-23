@@ -8,7 +8,7 @@ Office = ['ppt', 'xlsx', 'docx', 'doc', 'pptx']
 # Wps = ['dps', 'wps', 'et']
 Win = ['hiv', 'sam', 'system']
 # Txt = ['txt']
-# Eml = ['eml'] #邮件
+Eml = ['eml'] #邮件
 
 class Reader:
 
@@ -20,6 +20,7 @@ class Reader:
         self.office_list = []
         self.wps_list = []
         self.win_list = []
+        self.eml_list = []
         self.src = src
         self.count = 0
 
@@ -32,14 +33,17 @@ class Reader:
             with open(self.src+file, "r", encoding='utf-8') as f:
                 try:
                     f.read()
+                    if file.split('.')[-1] == 'eml':
+                        self.unreadable_list.append(file)
+                        continue
                     self.readable_list.append(file)
                 except UnicodeDecodeError:
                     self.unreadable_list.append(file)
 
-        if os.path.exists(r'../Readable_text'):
-            os.remove(r'../Readable_text')
+        if os.path.exists(r'fileDIR/Readable_text'):
+            os.remove(r'fileDIR/Readable_text')
         # Path("../Readable_text").
-        with open('../Readable_text', "a", encoding='utf-8') as f:
+        with open('fileDIR/Readable_text', "a", encoding='utf-8') as f:
             for file in self.readable_list:
                 f.write(file + "\n")
                 self.count += 1
@@ -56,6 +60,8 @@ class Reader:
                 #     self.wps_list.append(file)
                 elif file.split('.')[-1] in Win:
                     self.win_list.append(self.src+file)         #windows #.hiv
+                elif file.split('.')[-1] in Eml:
+                    self.eml_list.append(self.src+file)
             else:                                       #Win没有后缀
                 if file.split('%')[-1] in Win:          #win
                     self.win_list.append(self.src+file)
@@ -64,11 +70,6 @@ class Reader:
 if __name__ == '__main__':
     fr = Reader(u'dDIR/')
     fr.file_reader()
-    print(len(fr.file_list),len(fr.readable_list) + len(fr.unreadable_list),len(fr.unreadable_list), len(fr.office_list)+len(fr.img_list)+len(fr.win_list))
-    print(fr.count)
-    # print(fr.file_list)
-    # print(fr.img_list)
-    # print(fr.office_list)
-    # # print(fr.txt_list)
-    # print(fr.wps_list)
-    # print(fr.win_list)
+    # print(len(fr.file_list),len(fr.readable_list) + len(fr.unreadable_list),len(fr.unreadable_list), len(fr.office_list)+len(fr.img_list)+len(fr.win_list))
+    # print(fr.count)
+

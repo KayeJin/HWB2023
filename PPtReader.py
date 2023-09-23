@@ -4,21 +4,25 @@ import Reader
 from pptx import Presentation
 from pptx.shapes.picture import Picture
 from os.path import basename
-
+import imghdr
+from datetime import datetime
+Img = ['jpg', 'JPG', 'jpeg' , 'JPEG' , 'png', 'PNG', 'gif',  'GIF', 'bmp', 'BMP', 'tif', 'TIF', 'tiff', 'TIFF']
 index = 1
 class PPtReader:
 
-    def __init__(self, src: str, office_list: []) -> None:
+    def __init__(self, src: str, office_list: [], imgdir: str) -> None:
         self.src = src
         self.office_list = office_list
+        self.ImageDir = imgdir
 
     def getText(self): #https://cloud.tencent.com/developer/article/1708628
         res = []
         res_img = []
         img_name = []
+        c = 0
         for file in self.office_list:
             if file.split('.')[-1] == 'pptx':
-                presentation = Presentation(self.src+"/"+file)
+                presentation = Presentation(file)
                 for slide in presentation.slides:
                     for shape in slide.shapes:
                         if shape.has_text_frame:
@@ -32,49 +36,25 @@ class PPtReader:
                             #shape.image.blob #图像二进制字节流
                             imagetype = shape.image.content_type
                             imtype = imagetype[imagetype.find('/') +1 : ] #后缀名\
-                            img_name.append('../IMAGE/'+file+shape.name+'_.'+imtype)
+                            # imtype = '.png'
+                            
+                            if imtype not in Img:
+                                continue
+                            file = file.split('/')[-1]
+                            suffix = datetime.strftime(datetime.now(),'%Y%m%d-%H%M%S')+ '.png'
+                            suffix = str(c)+'.png'
+                            c += 1
+                            img_name.append(file+suffix)
                             res_img.append(shape.image.blob)
-                            # print(imtype)
-                            # path = '../IMAGE2/'+file+shape.name+'_.'+imtype
-                            # with open(path, 'wb') as f:
-                            #     f.write(shape.image.blob)
-                                # index += 1
-  
-        with open('../ppt_text', 'w', encoding='utf-8') as f:
+        with open('fileDIR/ppt_text.txt', 'w', encoding='utf-8') as f:
             for i in res:
                 f.write(i)
         c = 0
         for i in img_name:
-            with open(i, "wb") as f:
+            with open(self.ImageDir + i, "wb") as f:
+            # with open('../IMAGE/'+i, "wb") as f:
                 f.write(res_img[c])
             c += 1
-
-    # def getTable(self):
-    #     res = []
-    #     for file in self.office_list:
-    #         if file.split('.')[-1] == 'pptx':
-    #             presentation = Presentation(self.src+"/"+file)
-    #             for slide in presentation.slides:
-    #                 for shape in slide.shapes:
-    #                     if shape.has_table:
-    #                         for row in shape.table.rows: #读每行
-    #                             for cell in row.cells: #读一行的所有单元格
-    #                                 res.append(cell.text)
-
-    # def getPicture(self):
-    #     global index
-    #     for file in self.office_list:
-    #         if file.split('.')[-1] == 'pptx':
-    #             presentation = Presentation(self.src+"/"+file)
-    #             for slide in presentation.slides:
-    #                 for shape in slide.shapes:
-    #                     if isinstance(shape, Picture):
-    #                         #shape.image.blob #图像二进制字节流
-    #                         with open(basename(shape), 'wb') as f:
-    #                             f.write(shape.image.blob)
-    #                             index += 1
-
-
 
 
 if __name__ == '__main__':
