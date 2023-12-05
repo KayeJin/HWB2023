@@ -51,6 +51,7 @@ itsdangerous==2.1.2
 Jinja2==3.1.2
 JPype1==0.7.0
 kiwisolver==1.4.5
+layoutparser==0.0.0
 lazy-loader==0.3
 ldap3==2.9.1
 ldapdomaindump==0.9.4
